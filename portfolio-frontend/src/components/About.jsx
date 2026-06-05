@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import axios from "axios";
 import { useTranslation } from "react-i18next";
+import API from "../services/api";
 
 function About() {
   const [herramientas, setHerramientas] = useState([]);
   const { t } = useTranslation();
 
   useEffect(() => {
-    axios.get("http://localhost:8081/api/herramientas")
+    API.get("/herramientas")
       .then(res => setHerramientas(res.data))
       .catch(err => console.error(err));
   }, []);
