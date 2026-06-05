@@ -4,7 +4,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useTranslation } from "react-i18next";
 
 function Contacto() {
-    const { t, i18n } = useTranslation();
+    const { t} = useTranslation();
     const mailto = `mailto:gabyrc69@gmail.com?subject=${encodeURIComponent(t("contact.subject"))}&body=${t("contact.body")}`;
 
   return (

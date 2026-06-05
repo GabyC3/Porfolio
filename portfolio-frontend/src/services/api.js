@@ -20,7 +20,7 @@ API.interceptors.response.use(
   err => {
     const url = err.config?.url;
 
-    if (url && url.includes("/auth/login") || url?.includes("/visitas")) {
+    if (url?.includes("/auth/login") || url?.includes("/visitas")) {
           return Promise.reject(err);
     }
 

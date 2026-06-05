@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "../images/logoNav.png";
 import { useTranslation } from "react-i18next";
-import i18n from "i18next";
 
 function Navbar() {
   const [active, setActive] = useState("hero");
@@ -39,7 +38,7 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-    <img src={logo} className  ="logoNav"/>
+    <img src={logo} className="logoNav" alt="Logo del navbar"/>
 
       <ul>
         <li
